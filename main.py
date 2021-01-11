@@ -43,3 +43,11 @@ plt.title('Plot to show V between Xmin and Xmax')
 plt.grid()
 plt.savefig('figures\\B1.eps', format='eps')
 plt.show()
+
+#########################
+
+x=0.75*xmin+0.25*xmax
+y=alpha-x
+L=L0+L1*np.exp(-alpha*y)
+V2 = np.sqrt((7*m*(R*y+L)**2)*((5*k*(x-d)/(7*m))-(5*g*np.sin(theta)/7)))
+
