@@ -41,5 +41,5 @@ plt.xlabel('xe')
 plt.ylabel('V')
 plt.title('Plot to show V between Xmin and Xmax')
 plt.grid()
-plt.savefig('figures\\B1.svg', format='svg')  # Save the graph as a .svg file
+plt.savefig('figures\\B1.eps', format='eps')
 plt.show()
