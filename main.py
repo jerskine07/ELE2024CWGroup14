@@ -16,7 +16,7 @@ R = 53
 L0 = 0.120
 L1 = 0.25
 alpha = 1.2
-# c=6815*(g*(m^3))/((A^2)*(s^2))
+c=6815
 c=1
 k = 1880
 b = 10.4
@@ -29,14 +29,12 @@ xmin = d + (m * g * np.sin(theta) / (k))
 xmax = delta
 print(xmin)
 print(xmax)
-xe = (xmin, xmax)
+xe = np.array((range(100)))
 # At equilibrium no acceleration or velocity: x_2=0 x_3=0
-x= 1
 x2=0
-y=alpha-x
+y=alpha-xe
 L=L0+L1*np.exp(-alpha*y)
-Ve = sm.symbols('Ve',real=True)
+Ve = np.array
+Ve =np.array(np.sqrt((7*m*(R*y+L)^2)*((5*k(xe-d)/(7*m))-(5*g*np.sin(theta)/7))))
 
-def sys(Ve,x):
-    return (5*c*(Ve)^2)/(7*m*(R*y*L)^2) + (5*g*np.sin(theta))/(7) - (5*k*(xe-d))/(7*m) - (5*b*x2)/(7*m)
-
+plt.plot(xe,Ve)
